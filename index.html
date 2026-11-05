@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpare | Student Resource Sharing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a class="logo" href="#home">Study<span>Spare</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#resources">Resources</a>
+            <a href="#upload">Upload</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">LEARN · SHARE · GROW</p>
+                <h1>Knowledge grows<br>when we <span>share.</span></h1>
+                <p class="hero-text">
+                    Discover, share and access educational resources
+                    with your fellow students.
+                </p>
+                <a href="#resources" class="primary-btn">Explore Resources</a>
+            </div>
+
+            <div class="hero-icon">📚</div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h2 id="totalResources">0</h2>
+                <p>Total Resources</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="totalSubjects">0</h2>
+                <p>Subjects</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="totalDownloads">0</h2>
+                <p>Total Downloads</p>
+            </div>
+        </section>
+
+        <section class="upload-section" id="upload">
+            <h2>Share Your Knowledge</h2>
+            <p>Upload useful educational materials for other students.</p>
+
+            <form id="uploadForm">
+                <label for="title">Resource title</label>
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Example: Grade 11 Mathematics Notes"
+                    required
+                >
+
+                <label for="subject">Subject</label>
+                <select id="subject" required>
+                    <option value="">Select subject</option>
+                    <option>Mathematics</option>
+                    <option>Physics</option>
+                    <option>Chemistry</option>
+                    <option>Biology</option>
+                    <option>English</option>
+                    <option>ICT</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="resourceType">Resource type</label>
+                <select id="resourceType" required>
+                    <option value="">Select resource type</option>
+                    <option>Notes</option>
+                    <option>Summary</option>
+                    <option>Past Exam</option>
+                    <option>Worksheet</option>
+                </select>
+
+                <label for="fileInput">Choose a PDF file</label>
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,application/pdf"
+                    required
+                >
+
+                <button type="submit" class="primary-btn" id="uploadButton">
+                    Upload Resource
+                </button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="library" id="resources">
+            <div class="section-heading">
+                <h2>Study Library</h2>
+                <p>Explore available learning materials.</p>
+            </div>
+
+            <div class="filters">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search resources by title..."
+                >
+
+                <select id="filterSubject">
+                    <option value="">All Subjects</option>
+                    <option>Mathematics</option>
+                    <option>Physics</option>
+                    <option>Chemistry</option>
+                    <option>Biology</option>
+                    <option>English</option>
+                    <option>ICT</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div id="resourceList" class="resource-grid">
+                <p class="empty">Loading resources...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>StudySpare</h3>
+        <p>Sharing knowledge. Building a better learning community.</p>
+        <p>© 2026 StudySpare</p>
+    </footer>
+
+</body>
+</html>
